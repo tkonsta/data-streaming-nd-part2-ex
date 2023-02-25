@@ -16,7 +16,7 @@ spark.sparkContext.setLogLevel('WARN')
 kafkaRawStreamingDF = spark \
     .readStream \
     .format("kafka") \
-    .option("kafka.bootstrap.servers", "kafka:19092") \
+    .option("kafka.bootstrap.servers", "localhost:9092") \
     .option("subscribe","fuel-level") \
     .option("startingOffsets","earliest") \
     .load()
